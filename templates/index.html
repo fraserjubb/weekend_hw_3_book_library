@@ -24,7 +24,7 @@
     {% for book in books %}
     <ul>
         <li>
-            <p><b>{{ book.title }}</b> - {{book.author}} - {{book.genre}}</p>
+            <p><a href=http://localhost:4999/books/{{loop.index0}}> <b>{{ book.title }}</b> - {{book.author}} - {{book.genre}}</p></a>
         </li>
     </ul>    
 

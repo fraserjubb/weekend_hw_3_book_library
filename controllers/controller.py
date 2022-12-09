@@ -16,6 +16,12 @@ def add_new_book():
     add_new_book_to_library(new_book)
     return redirect('/books')
 
+@app.route('/books/<book>')
+def book(book):
+    return render_template('book.html', title="book", book=books[int(book)])
+    # return redirect('/books/<book>')
+
+
 @app.route('/books/delete/<index>', methods=['POST'])
 def delete_book(index):
     remove_book_from_library(int(index))
