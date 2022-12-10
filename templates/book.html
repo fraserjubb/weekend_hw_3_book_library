@@ -7,6 +7,11 @@
     <b>{{ book.title }}</b> - {{book.author}} - {{book.genre}}</p>
         </li>
     </ul>
+
+    {% if book.checked_out %}
+    <p><i>Checked Out</i></p>
+    
+{% endif %}
 </body>
 {% endblock %}
 </html>
